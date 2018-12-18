@@ -1,0 +1,33 @@
+
+<app-form *ngIf="showDetail" [customers]="selectedCustomer" (result)="prosesResult($event)"></app-form>
+<a (click)="muncul()" class="btn btn-primary btn-lg">Add Data</a>
+<h2 align="center"><u>List Customers</u></h2>
+<table class="table table-sm"  align="center">
+  <thead>
+    <th scope="col">Id</th>
+    <th scope="col">First Name </th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Birth Date</th>
+    <th scope="col">Username</th>
+    <th scope="col">Password</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">Phone Type</th>
+    <th scope="col">Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of listCustomers">
+      <td><a (click)="selectCustomers(cust);"><u>{{cust.id}}</u></a></td>
+      <td>{{cust.firtsname}}</td>
+      <td>{{cust.lastname}}</td>
+      <td>{{cust.birthdate}}</td>
+      <td>{{cust.username}}</td>
+      <td>{{cust.password}}</td>
+      <td>{{cust.phonenumber}}</td>
+      <td>{{cust.phonetype}}</td>
+      <td><a href="#" class="btn btn-danger btn-sm">Delete</a>
+        <a (click)="selectCustomers(cust);" class="btn btn-warning btn-sm">Update</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
