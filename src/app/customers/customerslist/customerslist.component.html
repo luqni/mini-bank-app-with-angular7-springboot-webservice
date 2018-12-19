@@ -1,5 +1,5 @@
 
-<app-form *ngIf="showDetail" [customers]="selectedCustomer" (result)="prosesResult($event)"></app-form>
+<app-form #formCustomer *ngIf="showDetail" [customers]="selectedCustomer" (result)="prosesResult($event)"></app-form>
 <app-signup *ngIf="showDetail1" [customers]="selectedCustomer" (result)="prosesResult($event)"></app-signup>
 <a (click)="muncul()" class="btn btn-primary btn-lg">Add Data</a>
 <h2 align="center"><u>List Customers</u></h2>
@@ -26,8 +26,8 @@
       <td>{{cust.phonenumber}}</td>
       <td>{{cust.phonetype}}</td>
       <td>
-        <button (click)="selectCustomers(cust);" class="btn btn-primary" type="button">Update Data</button>
-        
+        <button (click)="selectCustomers(cust);" class="btn btn-primary" type="button">Edit</button>
+        <button  (click)="deletCustumors(cust);" class="btn btn-danger" type="button">Del</button>
       </td>
     </tr>
   </tbody>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomersService } from '../customers.service';
 import { Customers } from '../customers';
+import { FormComponent } from '../form/form.component';
 
 
 @Component({
@@ -13,6 +14,8 @@ export class CustomerslistComponent implements OnInit {
   showDetail:boolean = false; //dipakai untuk memunculkan atau menghilangkan detail
   selectedCustomer:Customers = new Customers();
   showDetail1:boolean = false;
+  @ViewChild('formCustomer')
+  formCustomer:FormComponent; //objek yang wakili di htmlnya
 
   constructor(private customersService:CustomersService) { }
   //method yang pertama kali di jalankan saat page di buka
@@ -22,6 +25,7 @@ export class CustomerslistComponent implements OnInit {
 
   muncul() {
     this.showDetail1=true;
+    this.showDetail=false;
   }
 
   selectCustomers(customers:Customers){
@@ -37,6 +41,8 @@ export class CustomerslistComponent implements OnInit {
 
     this.selectedCustomer = customers;
     this.showDetail=true;
+    this.showDetail1=false;
+    this.formCustomer.updatedata();
   }
 
   loadData() {
@@ -54,6 +60,23 @@ export class CustomerslistComponent implements OnInit {
       this.showDetail=false;
       this.loadData();
     }
+  }
+  prosesResult2(result){
+    if(result){
+      this.showDetail1=false;
+      this.loadData();
+    }
+  }
+  deletCustumors(id){
+    if(confirm('Mau hapus Aku Nich.. :( ?')){
+      this.customersService.delete(id).subscribe(res=>{
+        alert('berhasil');
+        this.loadData();
+      },err=>{
+        alert('gagal kamu nakal');
+      });
+    }
+    
   }
 
 }

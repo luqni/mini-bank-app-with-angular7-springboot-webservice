@@ -7,7 +7,6 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
-import { AccountlistComponent } from './accountlist/accountlist.component';
 import { CustomerslistComponent } from './customers/customerslist/customerslist.component';
 import { FormComponent } from './customers/form/form.component';
 
@@ -21,7 +20,6 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'signin',component:SigninComponent},
   {path:'createaccount',component:CreateaccountComponent},
-  {path:'accountlist',component:AccountlistComponent},
   {path:'customerslist',component:CustomerslistComponent},
   {path:'form',component:FormComponent}
 ];
