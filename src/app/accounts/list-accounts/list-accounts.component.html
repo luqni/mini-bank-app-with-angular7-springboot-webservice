@@ -1,0 +1,23 @@
+<table class="table table-sm"  align="center">
+  <thead>
+
+    <th scope="col">Id </th>
+    <th scope="col">Open Date</th>
+    <th scope="col">Balance</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let acc of listAccounts">
+      <td>{{acc.id}}</td>
+      <td>{{acc.opendate}}</td>
+      <td>{{acc.balance}}</td>
+      <!-- <td>{{acc.customerid | json}}</td> -->
+      <td>{{acc.customerid ? acc.customerid.firtsname: " "}}</td>
+      <td>
+        <button (click)="selectCustomers(cust);" class="btn btn-primary" type="button">Edit</button>
+        <button  (click)="deletCustumors(cust);" class="btn btn-danger" type="button">Del</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -9,6 +9,8 @@ import { SigninComponent } from './signin/signin.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { CustomerslistComponent } from './customers/customerslist/customerslist.component';
 import { FormComponent } from './customers/form/form.component';
+import { FormAccountComponent } from './accounts/form-account/form-account.component';
+import { ListAccountsComponent } from './accounts/list-accounts/list-accounts.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:'signin',component:SigninComponent},
   {path:'createaccount',component:CreateaccountComponent},
   {path:'customerslist',component:CustomerslistComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},
+  {path:'form-account',component:FormAccountComponent},
+  {path:'accounts-list',component:ListAccountsComponent}
 ];
 
 @NgModule({

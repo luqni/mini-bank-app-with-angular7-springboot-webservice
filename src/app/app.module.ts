@@ -18,6 +18,7 @@ import { CustomersService } from './customers/customers.service';
 import { FormComponent } from './customers/form/form.component';
 import { FormAccountComponent } from './accounts/form-account/form-account.component';
 import { EnigmaPipe } from './shared/enigma.pipe';
+import { ListAccountsComponent } from './accounts/list-accounts/list-accounts.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EnigmaPipe } from './shared/enigma.pipe';
     CustomerslistComponent,
     FormComponent,
     FormAccountComponent,
-    EnigmaPipe
+    EnigmaPipe,
+    ListAccountsComponent
   ],
   imports: [
     BrowserModule,
