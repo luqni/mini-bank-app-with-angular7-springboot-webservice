@@ -29,6 +29,22 @@ export class FormComponent implements OnInit {
       alert('error : '+JSON.stringify(err));
     });
   }
+  deleteData(){
+    this.customersService.delete(this.customers).subscribe((response)=>{
+      console.log(JSON.stringify(response));
+      this.result.emit(true);
+    },(err)=>{
+      alert('error : '+JSON.stringify(err));
+    });
+  }
+  tambahData(){
+    this.customersService.insert(this.customers).subscribe((response)=>{
+      console.log(JSON.stringify(response));
+      this.result.emit(true);
+    },(err)=>{
+      alert('error : '+JSON.stringify(err));
+    });
+  }
 
   cancelChanges(){
     this.result.emit(true);

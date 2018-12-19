@@ -12,6 +12,7 @@ export class CustomerslistComponent implements OnInit {
   listCustomers:Customers[] = [];
   showDetail:boolean = false; //dipakai untuk memunculkan atau menghilangkan detail
   selectedCustomer:Customers = new Customers();
+  showDetail1:boolean = false;
 
   constructor(private customersService:CustomersService) { }
   //method yang pertama kali di jalankan saat page di buka
@@ -20,7 +21,7 @@ export class CustomerslistComponent implements OnInit {
   }
 
   muncul() {
-    this.showDetail=true;
+    this.showDetail1=true;
   }
 
   selectCustomers(customers:Customers){
@@ -41,6 +42,7 @@ export class CustomerslistComponent implements OnInit {
   loadData() {
     this.customersService.getList().subscribe((response)=>{
       console.log(JSON.stringify(response));
+      this.listCustomers=[];
       Object.assign(this.listCustomers, response);
     },(err)=>{
       alert('error : '+JSON.stringify(err));

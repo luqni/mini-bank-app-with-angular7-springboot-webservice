@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
   constructor(private customersService:CustomersService) { }
 
   submitDataInsert(){
-    this.customersService.update(this.customers).subscribe((response)=>{
+    this.customersService.insert(this.customers).subscribe((response)=>{
       console.log(JSON.stringify(response));
       this.result.emit(true);
     },(err)=>{

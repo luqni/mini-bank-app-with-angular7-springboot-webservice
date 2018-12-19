@@ -20,5 +20,7 @@ export class CustomersService {
   insert(customers:Customers){
     return this.httpClient.post('http://localhost:8080/Customer/post', customers);
   }
-  
+  delete(customers:Customers){
+    return this.httpClient.delete('http://localhost:8080/Customer/delete/'+customers.id);
+  }
 }
