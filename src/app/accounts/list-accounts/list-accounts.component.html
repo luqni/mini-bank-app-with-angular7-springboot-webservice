@@ -11,7 +11,7 @@
     <th scope="col">Action</th>
   </thead>
   <tbody>
-    <tr *ngFor="let acc of listAccounts">
+    <tr *ngFor="let acc of listAccounts | paginate: { itemsPerPage: 5, currentPage: p }">
       <td align="center"><a (click)="selectAccounts(acc);">{{acc.id}}</a></td>
       <td align="center">{{acc.opendate}}</td>
       <td align="center">{{acc.balance | currency: 'Rp. '}}</td>
@@ -20,14 +20,15 @@
       <td align="center">
         <button (click)="selectAccounts(acc);" class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">Edit</button>
         <button  (click)="deleteAcc(acc);" class="btn btn-danger" type="button">Del</button>
-        <button  (click)="deleteAcc(acc);" class="btn btn-danger" type="button">view</button>
+        <!-- <button  (click)="deleteAcc(acc);" class="btn btn-danger" type="button">view</button> -->
       </td>
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 
 <hr>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

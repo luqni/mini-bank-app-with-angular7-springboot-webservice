@@ -11,7 +11,7 @@
     <th scope="col">Action</th>
   </thead>
   <tbody>
-    <tr *ngFor="let trx of listTransaction">
+    <tr *ngFor="let trx of listTransaction | paginate: { itemsPerPage: 5, currentPage: p }">
       <td align="center"><a (click)="selectAccounts(acc);">{{trx.id}}</a></td>
       <td align="center">{{trx.type}}</td>
       <td align="center">{{trx.amount | currency: 'Rp. '}}</td>
@@ -25,3 +25,4 @@
     </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

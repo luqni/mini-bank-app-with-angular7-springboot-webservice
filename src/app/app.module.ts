@@ -26,6 +26,7 @@ import { CreateTransactionsComponent } from './transactions/create-transactions/
 import { FormTransactionsComponent } from './transactions/form/form-transactions.component';
 import { ComboCustomersComponent } from './shared/customers/combo-customers/combo-customers.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ListTransactionsComponent,
     CreateTransactionsComponent,
     FormTransactionsComponent,
-    ComboCustomersComponent
+    ComboCustomersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

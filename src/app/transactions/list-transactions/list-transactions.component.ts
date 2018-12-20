@@ -35,5 +35,8 @@ export class ListTransactionsComponent implements OnInit {
     }
     
   }
+  view(){
+    
+  }
 
 }
