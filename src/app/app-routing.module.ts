@@ -11,6 +11,9 @@ import { CustomerslistComponent } from './customers/customerslist/customerslist.
 import { FormComponent } from './customers/form/form.component';
 import { FormAccountComponent } from './accounts/form-account/form-account.component';
 import { ListAccountsComponent } from './accounts/list-accounts/list-accounts.component';
+import { ListTransactionsComponent } from './transactions/list-transactions/list-transactions.component';
+import { CreateTransactionsComponent } from './transactions/create-transactions/create-transactions.component';
+import { FormTransactionsComponent } from './transactions/form/form-transactions.component';
 
 
 const routes: Routes = [
@@ -25,7 +28,10 @@ const routes: Routes = [
   {path:'customerslist',component:CustomerslistComponent},
   {path:'form',component:FormComponent},
   {path:'form-account',component:FormAccountComponent},
-  {path:'accounts-list',component:ListAccountsComponent}
+  {path:'accounts-list',component:ListAccountsComponent},
+  {path:'list-transaction',component:ListTransactionsComponent},
+  {path:'update-transactions/:id',component:FormTransactionsComponent},
+  {path:'create-transactions',component:CreateTransactionsComponent}
 ];
 
 @NgModule({

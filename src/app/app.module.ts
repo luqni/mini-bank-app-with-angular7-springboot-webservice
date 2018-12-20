@@ -19,6 +19,11 @@ import { FormComponent } from './customers/form/form.component';
 import { FormAccountComponent } from './accounts/form-account/form-account.component';
 import { EnigmaPipe } from './shared/enigma.pipe';
 import { ListAccountsComponent } from './accounts/list-accounts/list-accounts.component';
+import { ModalAccountsComponent } from './accounts/modal-accounts/modal-accounts.component';
+import { UpdateAccountsComponent } from './accounts/update-accounts/update-accounts.component';
+import { ListTransactionsComponent } from './transactions/list-transactions/list-transactions.component';
+import { CreateTransactionsComponent } from './transactions/create-transactions/create-transactions.component';
+import { FormTransactionsComponent } from './transactions/form/form-transactions.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { ListAccountsComponent } from './accounts/list-accounts/list-accounts.co
     FormComponent,
     FormAccountComponent,
     EnigmaPipe,
-    ListAccountsComponent
+    ListAccountsComponent,
+    ModalAccountsComponent,
+    UpdateAccountsComponent,
+    ListTransactionsComponent,
+    CreateTransactionsComponent,
+    FormTransactionsComponent
   ],
   imports: [
     BrowserModule,

@@ -14,10 +14,11 @@
 </header> -->
 <style>
   .bg-light-custom{
-    background-color: #ff6b00;
+    background-color: #ffff;
   }
 </style>
-<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light-custom">
+<div class="shadow-lg p-3 mb-5 bg-white rounded sticky-top navbar-light">
+<nav class="navbar navbar-expand-lg bg-light-custom">
   <a class="navbar-brand" href="#">Enigma Bank</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -52,8 +53,8 @@
           Transaction
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" [routerLink]="['/createaccount']" routerLinkActive="router-link-active" >Create Account</a>
-          <a class="dropdown-item" [routerLink]="['/accountlist']" routerLinkActive="router-link-active" >Account List</a>
+          <a class="dropdown-item" [routerLink]="['/create-transactions']" routerLinkActive="router-link-active" >Create Account</a>
+          <a class="dropdown-item" [routerLink]="['/list-transaction']" routerLinkActive="router-link-active" >Account List</a>
         </div>
       </li>
     </ul>
@@ -63,3 +64,4 @@
     </form>
   </div>
 </nav>
+</div>

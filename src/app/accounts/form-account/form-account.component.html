@@ -1,7 +1,7 @@
 <form [formGroup]="accountsFormGroup">
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">Open Date</label>
-    <div class="col-sm-10">
+    <div class="col-auto my-1">
       <input type="date" class="form-control" formControlName="opendate">
     </div>
   </div>
@@ -14,9 +14,10 @@
   <fieldset class="form-group">
     <div class="row">
       <legend class="col-form-label col-sm-2 pt-0">Customer</legend>
-      <div class="col-sm-10">
-        <select formControlName="customerid">
-          <option *ngFor="let item of customers" >{{item.firtsname}}</option>
+      <div class="col-auto my-1">
+        <select class="custom-select mr-sm-2" formControlName="accountid">
+          <option selected >Choose...</option>
+          <option *ngFor="let item of customers" [ngValue] = 'item.id' >{{item.firtsname}}</option>
         </select>
       </div>
     </div>
@@ -24,7 +25,7 @@
  
   <div class="form-group row">
     <div class="col-sm-10">
-      <button (click)="submitData()" type="submit" class="btn btn-primary">Sign in</button>
+      <button (click)="submitData()" type="submit" class="btn btn-primary">Add Data</button>
     </div>
   </div>
 </form>

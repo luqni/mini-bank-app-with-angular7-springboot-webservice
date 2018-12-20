@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomersService } from '../customers.service';
 import { Customers } from '../customers';
 import { FormComponent } from '../form/form.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class CustomerslistComponent implements OnInit {
   @ViewChild('formCustomer')
   formCustomer:FormComponent; //objek yang wakili di htmlnya
 
-  constructor(private customersService:CustomersService) { }
+  constructor(private customersService:CustomersService, private router:Router) { }
   //method yang pertama kali di jalankan saat page di buka
   ngOnInit() {
     this.loadData();
@@ -77,6 +78,13 @@ export class CustomerslistComponent implements OnInit {
       });
     }
     
+  }
+  viewAccount(customers:Customers){
+    console.log(customers);
+    this.router.navigate([
+      '/accounts-list',
+      { customers:customers.id}
+    ]);
   }
 
 }

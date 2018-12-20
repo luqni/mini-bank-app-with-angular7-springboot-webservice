@@ -42,6 +42,7 @@ export class FormAccountComponent implements OnInit {
   }
   submitData(){
     let acconts:Accounts = new Accounts();
+    acconts.id;
     acconts.opendate = this.accountsFormGroup.controls['opendate'].value;
     acconts.balance = this.accountsFormGroup.controls['balance'].value;
 
@@ -51,7 +52,7 @@ export class FormAccountComponent implements OnInit {
     // console.log(this.accountsFormGroup.controls['customerid'].value)
    
     acconts.customerid = customer;
-
+    console.log(acconts);
     this.accountService.insertAccounts(acconts).subscribe((response)=>{
       console.log(JSON.stringify(response));
       this.route.navigate(['/accounts-list']);

@@ -8,14 +8,24 @@ import { Accounts } from './accounts';
 export class AccountsService {
 
   constructor(private httpClient:HttpClient) { }
-  getList(){
-    return this.httpClient.get('http://localhost:8080/Account/accounts');
+  getList(customers?){
+    let params:String = ' ';
+    if(customers){
+      params = '?customers=' + customers;
+    }
+    return this.httpClient.get('http://localhost:8080/Account/list'+params);
   }
   getCustomer(){
     return this.httpClient.get('http://localhost:8080/Customer/customers');
   }
   insertAccounts(accounts:Accounts){
     return this.httpClient.post('http://localhost:8080/Account/post',accounts);
+  }
+  updateAccounts(accounts:Accounts){
+    return this.httpClient.put('http://localhost:8080/Account/update',accounts);
+  }
+  deletAccounts(accounts:Accounts){
+    return this.httpClient.delete('http://localhost:8080/Account/hapus/'+accounts.id);
   }
 
 }
