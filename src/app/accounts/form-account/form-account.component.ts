@@ -59,5 +59,5 @@ export class FormAccountComponent implements OnInit {
     },(err)=>{
       alert('error : '+JSON.stringify(err));
     });
-  }
+  } 
 }

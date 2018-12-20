@@ -24,6 +24,8 @@ import { UpdateAccountsComponent } from './accounts/update-accounts/update-accou
 import { ListTransactionsComponent } from './transactions/list-transactions/list-transactions.component';
 import { CreateTransactionsComponent } from './transactions/create-transactions/create-transactions.component';
 import { FormTransactionsComponent } from './transactions/form/form-transactions.component';
+import { ComboCustomersComponent } from './shared/customers/combo-customers/combo-customers.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -45,14 +47,16 @@ import { FormTransactionsComponent } from './transactions/form/form-transactions
     UpdateAccountsComponent,
     ListTransactionsComponent,
     CreateTransactionsComponent,
-    FormTransactionsComponent
+    FormTransactionsComponent,
+    ComboCustomersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
 
   ],
   providers: [CustomersService],

@@ -36,7 +36,7 @@ export class ListAccountsComponent implements OnInit {
       balance:['']
     });
     // this.updatedata();
-    this.activatedRoute.params.subscribe(params =>{
+      this.activatedRoute.params.subscribe(params =>{
       const customers:String=params['customers'];
       this.loadData(customers);
     })
