@@ -1,4 +1,8 @@
 ![alt text](https://github.com/luqni/mini-bank-app-with-angular7-springboot-webservice/blob/master/home%20page.png)
+![alt text](https://github.com/luqni/mini-bank-app-with-angular7-springboot-webservice/blob/master/list%20customer%20page.png)
+![alt text](https://github.com/luqni/mini-bank-app-with-angular7-springboot-webservice/blob/master/list%20account%20page.png)
+![alt text](https://github.com/luqni/mini-bank-app-with-angular7-springboot-webservice/blob/master/list%20transaksi%20page.png)
+
 
 
 # Bank
