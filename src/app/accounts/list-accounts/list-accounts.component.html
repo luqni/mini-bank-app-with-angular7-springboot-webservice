@@ -18,8 +18,8 @@
       <!-- <td>{{acc.customerid | json}}</td> -->
       <td align="center">{{acc.customerid ? acc.customerid.firtsname: " "}}</td>
       <td align="center">
-        <button (click)="selectAccounts(acc);" class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">Edit</button>
-        <button  (click)="deleteAcc(acc);" class="btn btn-danger" type="button">Del</button>
+        <button (click)="selectAccounts(acc);" class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#exampleModal">Edit</button>
+        <button  (click)="deleteAcc(acc);" class="btn btn-outline-danger" type="button">Del</button>
         <!-- <button  (click)="deleteAcc(acc);" class="btn btn-danger" type="button">view</button> -->
       </td>
     </tr>
